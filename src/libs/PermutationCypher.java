@@ -31,7 +31,7 @@ public class PermutationCypher {
 			column++;
 		}
 		System.out.println("\n -- 1. Text:\n" + readMatrixAsString(crypTempMatrix));
-		crypTempMatrix = crypTextMatrix.clone();
+		crypTempMatrix = crypTextMatrix;
 		System.out.println("\n -- 2. Text:\n" + readMatrixAsString(crypTempMatrix));
 
 		getKeysSet(key);
@@ -68,16 +68,14 @@ public class PermutationCypher {
 		for (int i = 0; i < crypTempMatrix.length; i++) {
 			for (int j = 0; j < crypTempMatrix[i].length; j++) {
 				if (j == old) {
+					System.out.println("- changing column ["+ i +"]["+ j +"] : + " + crypTempMatrix[i][nou] + " ~~~~ " + crypTextMatrix[i][old]);
 					crypTempMatrix[i][nou] = crypTextMatrix[i][old];
-					System.out.println("Setting ["+ i +"]["+ j +"] : + " + crypTempMatrix[i][nou]);
 				}
 			}
 		}
 	}
 	
-	private void setRow(int old, int nou){
-		
-	}
+
 
 	private void orderMatrix() {
 		for (int i = 0; i < keys[0].length; i++) {
