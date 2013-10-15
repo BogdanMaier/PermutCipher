@@ -186,14 +186,6 @@ public class Gui {
 		comp1.add(chckbxZ);
 		chkList.add(chckbxZ);
 
-		JButton btnNewButton = new JButton("New button");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				getSelectedAlphabet();
-			}
-		});
-		btnNewButton.setBounds(310, 7, 89, 23);
-		comp1.add(btnNewButton);
 
 		JLabel label = new JLabel("\" \"");
 		label.setBounds(241, 220, 46, 14);
@@ -204,6 +196,14 @@ public class Gui {
 		comp1.add(checkBox);
 		chkList.add(checkBox);
 
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				getSelectedAlphabet();
+			}
+		});
+		btnNewButton.setBounds(310, 7, 89, 23);
+		comp1.add(btnNewButton);
 		// --- Ciphering Tab
 		JComponent comp2 = new JPanel();
 		comp2.setName("Ciphering");
