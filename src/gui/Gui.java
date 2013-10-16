@@ -239,7 +239,8 @@ public class Gui {
 		JButton btnEncrypt = new JButton("Encrypt");
 		btnEncrypt.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				textCrypt.setText(ctrl.encrypt(textKey.getText(), textPlain.getText().trim()));
+				textCrypt.setText(ctrl.encrypt(textKey.getText(), textPlain.getText().trim(), false));
+				textPlain.setText("");
 			}
 		});
 		btnEncrypt.setBounds(61, 200, 89, 23);
@@ -248,7 +249,8 @@ public class Gui {
 		JButton btnDecrypt = new JButton("Decrypt");
 		btnDecrypt.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				textPlain.setText(ctrl.encrypt(textKey.getText(), textCrypt.getText().trim()));
+				textPlain.setText(ctrl.encrypt(textKey.getText(), textCrypt.getText().trim(), true));
+				textCrypt.setText("");
 			}
 		});
 		btnDecrypt.setBounds(258, 200, 89, 23);

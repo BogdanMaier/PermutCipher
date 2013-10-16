@@ -8,13 +8,13 @@ public class Controller {
 	public Controller(){
 	}
 	
-	public String encrypt(String key, String msg){
-		pc = new PermutationCypher( key,  msg);
-		return pc.encrypt();
+	public String encrypt(String key, String msg, boolean decrypt){
+		pc = new PermutationCypher( key,  msg, decrypt);
+		return pc.encrypt(msg, msg);
 	}
 
-	public String decrypt(String key, String msg){
-		pc = new PermutationCypher( key,  msg);
-		return pc.decrypt();
+	public String decrypt(String key, String msg, boolean decrypt){
+		pc = new PermutationCypher( key,  msg, decrypt);
+		return pc.decrypt(msg, msg);
 	}
 }
